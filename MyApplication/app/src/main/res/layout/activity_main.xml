@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--       Parte responsável pelo Bottom app Bar         -->
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.Material3.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#03A9F4"
+        app:fabAlignmentMode="center" />
+
+    <!-- Layout para posicionar os botões corretamente -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bottomAppBar"
+        android:layout_marginBottom="10dp"
+        >
+
+        <!-- Botão Central -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#1198AF"
+            android:src="@drawable/gear_icone"
+            app:tint="@null" />
+
+        <!-- Botão Esquerda -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#1198AF"
+            android:src="@drawable/user"
+            app:tint="@null"
+            android:layout_marginStart="32dp" />
+
+        <!-- Botão Direita -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#1198AF"
+            android:src="@drawable/baseline_content_paste_search_24"
+            app:tint="@null"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+    <!--       Fim do Bottom app Bara         -->
+
+
+    <!--   Inicio do Scroll View     -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:gravity="center">
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="center">
+
+        <!-- ScrollView horizontal centralizado -->
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#000000" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Imagem -->
+
+            <!-- Nome -->
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="center"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="User"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/genero" />
+            <!-- Sexo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Genero"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/age" />
+
+            <!-- Idade -->
+            <TextView
+                android:id="@+id/tvIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idade"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- LinearLayout com a info centralizado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#03A9F4"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info"
+                android:textAlignment="center"
+                android:textSize="24sp"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  Fim do Scroll View    -->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
