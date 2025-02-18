@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="#0B45B0"
         app:fabAlignmentMode="center" />
 
     <!-- Layout para posicionar os botões corretamente -->
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:backgroundTint="#1198AF"
+            android:backgroundTint="#0EA1EB"
             android:src="@drawable/gear_icone"
             app:tint="@null" />
 
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:backgroundTint="#1198AF"
+            android:backgroundTint="#0EA1EB"
             android:src="@drawable/user"
             app:tint="@null"
             android:layout_marginStart="32dp" />
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:backgroundTint="#1198AF"
+            android:backgroundTint="#0EA1EB"
             android:src="@drawable/baseline_content_paste_search_24"
             app:tint="@null"
             android:layout_marginEnd="32dp"
@@ -155,7 +155,7 @@
                 android:layout_height="45dp"
                 android:layout_marginEnd="16dp"
                 android:scaleType="center"
-                android:src="@drawable/user" />
+                android:src="@drawable/icone2" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -203,10 +203,11 @@
 
         <!-- LinearLayout com a info centralizado -->
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="#03A9F4"
+            android:background="#0B45B0"
             android:elevation="8dp"
             android:gravity="center"
             android:orientation="horizontal">
@@ -214,7 +215,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Info"
+                android:text="Mais Informações"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textSize="24sp"
 
@@ -222,9 +224,49 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="40dp"
+            >
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/fundo"
+                android:text="Reprovado"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/fundo2"
+                android:text="Contratado"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
+
     <!--  Fim do Scroll View    -->
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
