@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--       Parte responsável pelo Bottom app Bar         -->
-
+<!-- Parte responsável pelo Bottom App Bar -->
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +8,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main">
 
+    <!-- ScrollView para permitir rolagem do conteúdo -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
         android:clipToPadding="false"
         android:paddingBottom="100dp" />
 
+    <!-- BottomAppBar para navegação inferior -->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         style="@style/Widget.Material3.BottomAppBar"
@@ -30,8 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/bottomAppBar"
-        android:layout_marginBottom="10dp"
-        >
+        android:layout_marginBottom="10dp">
 
         <!-- Botão Central -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -64,28 +64,21 @@
             android:src="@drawable/baseline_content_paste_search_24"
             app:tint="@null"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginBottom="20dp" />
 
     </RelativeLayout>
 
+    <!-- Fim do Bottom App Bar -->
 
-
-
-
-    <!--       Fim do Bottom app Bara         -->
-
-
-    <!--   Inicio do Scroll View     -->
-
+    <!-- Início do ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:gravity="center">
-
     </ScrollView>
 
+    <!-- Layout principal que contém os elementos -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -107,6 +100,7 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
+                <!-- Blocos pretos representando itens roláveis -->
                 <View
                     android:layout_width="250dp"
                     android:layout_height="300dp"
@@ -138,7 +132,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-
+        <!-- Layout contendo informações do usuário -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -146,10 +140,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <!-- Imagem -->
-
-            <!-- Nome -->
-
+            <!-- Imagem do usuário -->
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
@@ -157,6 +148,7 @@
                 android:scaleType="center"
                 android:src="@drawable/icone2" />
 
+            <!-- Nome do usuário -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,14 +157,15 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <!-- Ícone de gênero -->
             <ImageView
-
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginEnd="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/genero" />
-            <!-- Sexo -->
+
+            <!-- Texto indicando gênero -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,6 +174,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <!-- Ícone de idade -->
             <ImageView
                 android:id="@+id/profileImage"
                 android:layout_width="45dp"
@@ -189,7 +183,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/age" />
 
-            <!-- Idade -->
+            <!-- Texto indicando idade -->
             <TextView
                 android:id="@+id/tvIdade"
                 android:layout_width="wrap_content"
@@ -200,10 +194,8 @@
 
         </LinearLayout>
 
-
-        <!-- LinearLayout com a info centralizado -->
+        <!-- Seção destacada para mais informações -->
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -218,20 +210,19 @@
                 android:text="Mais Informações"
                 android:textColor="@color/white"
                 android:textAlignment="center"
-                android:textSize="24sp"
-
-                />
+                android:textSize="24sp" />
 
         </LinearLayout>
 
+        <!-- Botões de status (Reprovado e Contratado) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal"
-            android:layout_margin="40dp"
-            >
+            android:layout_margin="40dp">
 
+            <!-- Botão Reprovado -->
             <Button
                 android:layout_width="70dp"
                 android:layout_height="100dp"
@@ -244,9 +235,9 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="100dp"
-                android:layout_weight="1"
-                />
+                android:layout_weight="1"/>
 
+            <!-- Botão Contratado -->
             <Button
                 android:layout_width="70dp"
                 android:layout_height="100dp"
@@ -256,19 +247,10 @@
                 android:textSize="10sp"
                 android:layout_weight="1"/>
 
-
         </LinearLayout>
-
-
 
     </LinearLayout>
 
-
-    <!--  Fim do Scroll View    -->
-
-
-
+    <!-- Fim do ScrollView -->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
